@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element attributes="update_synch=true" extends="sys_metadata" label="Variables" max_length="40" name="x_bbtrp_catalog_mu_variables" type="collection">
+        <element label="Bundled Item" max_length="32" name="bundled_item" reference="x_bbtrp_catalog_mu_bundled_with" type="reference"/>
+        <element label="Variable" max_length="32" name="variable" reference="item_option_new" type="reference"/>
+        <index name="index">
+            <element name="bundled_item"/>
+        </index>
+        <index name="index2">
+            <element name="variable"/>
+        </index>
+    </element>
+</database>
