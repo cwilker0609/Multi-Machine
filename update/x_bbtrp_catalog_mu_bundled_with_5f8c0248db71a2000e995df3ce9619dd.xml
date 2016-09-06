@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="x_bbtrp_catalog_mu_bundled_with">
+    <x_bbtrp_catalog_mu_bundled_with action="INSERT_OR_UPDATE">
+        <bundled_item display_value="BCB - Request a DB2 Server">5ee68a8d9ce24600da57c6b5c312a9ac</bundled_item>
+        <catalog_item/>
+        <sys_class_name>x_bbtrp_catalog_mu_bundled_with</sys_class_name>
+        <sys_created_by>C84436</sys_created_by>
+        <sys_created_on>2016-09-06 19:55:45</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>5f8c0248db71a2000e995df3ce9619dd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Catalog Multi Machine" source="x_bbtrp_catalog_mu">69538204db71a2000e995df3ce9619c8</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Catalog Multi Machine">69538204db71a2000e995df3ce9619c8</sys_scope>
+        <sys_update_name>x_bbtrp_catalog_mu_bundled_with_5f8c0248db71a2000e995df3ce9619dd</sys_update_name>
+        <sys_updated_by>C84436</sys_updated_by>
+        <sys_updated_on>2016-09-06 19:55:45</sys_updated_on>
+    </x_bbtrp_catalog_mu_bundled_with>
+</record_update>
