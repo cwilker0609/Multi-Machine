@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <database>
     <element attributes="update_synch=true" extends="sys_metadata" label="Bundled With" max_length="40" name="x_bbtrp_catalog_mu_bundled_with" type="collection">
-        <element label="Bundled Item" max_length="32" name="bundled_item" reference="sc_cat_item" type="reference"/>
+        <element display="true" label="Bundled Item" max_length="32" name="bundled_item" reference="sc_cat_item" type="reference"/>
         <element label="Catalog Item" max_length="32" name="catalog_item" reference="sc_cat_item" type="reference"/>
         <index name="index">
             <element name="bundled_item"/>

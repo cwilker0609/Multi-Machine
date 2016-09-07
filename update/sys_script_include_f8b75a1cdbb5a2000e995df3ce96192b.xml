@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_bbtrp_catalog_mu.filterVariables</api_name>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>filterVariables</name>
+        <script><![CDATA[function filterVariables(){
+	var retVal = [];
+	var variables = new GlideRecord('item_option_new');
+	variables.addQuery('cat_item', current.bundled_item.bundled_item.sys_id);
+	variables.addNotNullQuery('question_text');
+	variables.query();
+	
+	while(variables.next()){
+		retVal.push(variables.sys_id.toString());
+		
+	}
+	var vSets = new GlideRecord('io_set_item');
+	vSets.addQuery('sc_cat_item', current.bundled_item.bundled_item.sys_id);
+	vSets.query();
+	while(vSets.next()){
+		var gr = new GlideRecord('item_option_new');
+		gr.addQuery('variable_set', vSets.variable_set.sys_id);
+		gr.addNotNullQuery('question_text');
+		gr.query();
+		while(gr.next()){
+			retVal.push(gr.sys_id.toString());
+			
+		}
+		
+	}
+	return 'sys_idIN' + retVal.toString();
+	
+}]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>C84436</sys_created_by>
+        <sys_created_on>2016-09-07 15:35:58</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>f8b75a1cdbb5a2000e995df3ce96192b</sys_id>
+        <sys_mod_count>14</sys_mod_count>
+        <sys_name>filterVariables</sys_name>
+        <sys_package display_value="Catalog Multi Machine" source="x_bbtrp_catalog_mu">69538204db71a2000e995df3ce9619c8</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Catalog Multi Machine">69538204db71a2000e995df3ce9619c8</sys_scope>
+        <sys_update_name>sys_script_include_f8b75a1cdbb5a2000e995df3ce96192b</sys_update_name>
+        <sys_updated_by>C84436</sys_updated_by>
+        <sys_updated_on>2016-09-07 18:12:52</sys_updated_on>
+    </sys_script_include>
+</record_update>
